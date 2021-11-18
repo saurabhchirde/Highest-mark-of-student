@@ -74,5 +74,6 @@ function highestMarks(){
   console.log(" ");
 }
 
+
 studentData();
 highestMarks();
