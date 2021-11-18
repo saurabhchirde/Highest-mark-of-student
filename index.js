@@ -74,6 +74,16 @@ function highestMarks(){
   console.log(" ");
 }
 
+function averageFinalMark(){
+  let avg = 0;
+  let sum=0;
+  for(leti=0;i<student.lengh;i++){
+    sum=avg+student[i].finalMarks;
+  }
+  avg=sum/student.length;
+  console.log("Average Final Marks of all students is :"+avg);
+}
 
 studentData();
 highestMarks();
+averageFinalMark();
