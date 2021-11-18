@@ -27,7 +27,7 @@ function studentData(){
 }
 
 function highestMarks(){
-  let highUnit=student[0].unitTestMarks;
+  let highUnit= student[0].unitTestMarks;
   let highPreFinal = student[0].preFinalMarks;
   let high=student[0].finalMarks;       
   
@@ -36,7 +36,7 @@ function highestMarks(){
   let index=0;       
 
   // Unit test
-  for(let i=0;i<student.length;){       
+  for(let i=0;i<student.length; ){       
     if(highUnit>student[i].unitTestMarks){   
       i++;                             
     }else{
@@ -45,7 +45,7 @@ function highestMarks(){
       indexUnit++;
     }
   }
-  console.log("| " +student[indexUnit].name+" | " + "Scored highest marks in the final exam with score of : "+highUnit);
+  console.log("| " +student[indexUnit].name+" | " + "Scored highest marks in the Unit text with score of : "+ highUnit);
   console.log(" ");
   // Pre-final
   
@@ -53,7 +53,7 @@ function highestMarks(){
     if(highPreFinal>student[i].preFinalMarks){
       i++;
     }else{
-      highPreFinal = student[1].preFinalMarks;
+      highPreFinal = student[i].preFinalMarks;
       i++;
       indexPre++;
     }
@@ -76,9 +76,9 @@ function highestMarks(){
 
 function averageFinalMark(){
   let avg = 0;
-  let sum=0;
-  for(leti=0;i<student.lengh;i++){
-    sum=avg+student[i].finalMarks;
+  let sum= 0;
+  for(let i=0;i<student.lengh;i++){
+    sum=sum+student[i].finalMarks;
   }
   avg=sum/student.length;
   console.log("Average Final Marks of all students is :"+avg);
