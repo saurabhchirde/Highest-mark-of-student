@@ -3,7 +3,7 @@ let userName = readlineSync.question("What is your name? ");
 
 console.log("Welcome :" + userName);
 console.log(" ");
-console.log("Please enter students information to find out highest marks and average marks of all 5 students. ");
+console.log("Please enter students information to find out highest marks from 5 students. ");
 console.log(" ");
 
 let student=[
