@@ -31,21 +31,21 @@ function highestMarks(){
   let highPreFinal = student[0].preFinalMarks;
   let high=student[0].finalMarks;       
   
-  let indexUnit=0;  
-  let indexPre=0;    
-  let index=0;       
+  let hNameUnit="";  
+  let hNamePre="";    
+  let hName="";       
 
   // Unit test
   for(let i=0;i<student.length; ){       
     if(highUnit>student[i].unitTestMarks){   
       i++;                             
     }else{
-      highUnit =student[i].unitTestMarks;    
+      highUnit =student[i].unitTestMarks;   
+      hNameUnit=student[i].name;
       i++;                               
-      indexUnit++;
     }
   }
-  console.log("| " +student[indexUnit].name+" | " + "Scored highest marks in the Unit text with score of : "+ highUnit);
+  console.log(hNameUnit+ " scored highest marks in the Unit text with score of : "+ highUnit);
   console.log(" ");
   // Pre-final
   
@@ -54,34 +54,34 @@ function highestMarks(){
       i++;
     }else{
       highPreFinal = student[i].preFinalMarks;
+      hNamePre=student[i].name;
       i++;
-      indexPre++;
     }
   }
-  console.log("| " +student[indexPre].name+" | " + "Scored highest marks in the Pre-final exam with score of : "+highPreFinal);
+  console.log(hNamePre+" scored highest marks in the Pre-final exam with score of : "+highPreFinal);
   console.log(" ");
   // final
   for(let i=0;i<student.length;){       
     if(high>student[i].finalMarks){   
       i++;                             
     }else{
-      high =student[i].finalMarks;    
-      i++;                               
-      index++;
+      high =student[i].finalMarks;   
+      hName=student[i].name; 
+      i++;                            
     }
   }
-  console.log("| " +student[index].name+" | " + "Scored highest marks in the final exam with score of : "+high);
+  console.log(hName+" scored highest marks in the final exam with score of : "+high);
   console.log(" ");
 }
 
-function averageFinalMark(){
-  let avg = 0;
-  let sum= 0;
+let avg = 0;
+let sum= 0;
+function averageFinalMark(){  
   for(let i=0;i<student.lengh;i++){
     sum=sum+student[i].finalMarks;
   }
-  avg=sum/student.length;
-  console.log("Average Final Marks of all students is :"+avg);
+  avg=(sum/student.length);
+  console.log("Total sum is" + sum + ", Average Final Marks of all students is : "+avg);
 }
 
 studentData();
