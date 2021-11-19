@@ -74,16 +74,16 @@ function highestMarks(){
   console.log(" ");
 }
 
-let avg = 0;
-let sum= 0;
-function averageFinalMark(){  
-  for(let i=0;i<student.lengh;i++){
-    sum=sum+student[i].finalMarks;
-  }
-  avg=(sum/student.length);
-  console.log("Total sum is" + sum + ", Average Final Marks of all students is : "+avg);
-}
+// let avg = 0;
+// let sum= 0;
+// function averageFinalMark(){  
+//   for(let i=0;i<student.lengh;i++){
+//     sum=sum+student[i].finalMarks;
+//   }
+//   avg=(sum/student.length);
+//   console.log("Total sum is : " + sum + ", Average Final Marks of all students is : "+avg);
+// }
 
 studentData();
 highestMarks();
-averageFinalMark();
+// averageFinalMark();
